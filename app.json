@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "ReactLY",
+    "slug": "reactly",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "reactly",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "app.reactly.mobile"
+    },
+    "android": {
+      "package": "app.reactly.mobile",
+      "adaptiveIcon": {
+        "backgroundColor": "#070707"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "ReactLY uses your photo library only to let you choose source media for a local reaction video."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "ReactLY uses the front camera to record your genuine reaction.",
+          "microphonePermission": "ReactLY uses the microphone to include your voice in your reaction video.",
+          "recordAudioAndroid": true,
+          "barcodeScannerEnabled": false
+        }
+      ],
+      "expo-video",
+      [
+        "expo-media-library",
+        {
+          "savePhotosPermission": "ReactLY saves your finished Rect to your media library only when you tap Save to Photos.",
+          "granularPermissions": ["video"]
+        }
+      ],
+      "expo-sharing"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
